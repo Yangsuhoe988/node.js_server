@@ -15,7 +15,7 @@
     // src="https://replit.com/public/js/index.js" theme="blue" defer
     function getSound() {
       const name = document.getElementById('name').value
-      fetch(`https://nodejs.didtnghl123.repl.co/sound/${name}`)
+      fetch(`https://port-0-node-js-server-883524lbuvew48.gksl2.cloudtype.app/sound/${name}`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data.sound)
