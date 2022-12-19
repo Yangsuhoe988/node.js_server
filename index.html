@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang ="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>HTML TEST</title>
+</head>
+
+<body>
+  <h1 id = "sound"></h1>
+  <input id="name" type="text">
+  <button onclick = "getSound()">API 요청</button>
+  <script>
+    // src="https://replit.com/public/js/index.js" theme="blue" defer
+    function getSound() {
+      const name = document.getElementById('name').value
+      fetch(`https://nodejs.didtnghl123.repl.co/sound/${name}`)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data.sound)
+        document.getElementById('sound').innerHTML = data.sound
+      });  
+    }
+
+  </script> 
+</body>
+
+</html>
+<!--  -->
